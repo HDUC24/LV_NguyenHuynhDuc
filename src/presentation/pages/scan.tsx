@@ -1,10 +1,10 @@
 import React from "react";
 import { View, StyleSheet, Text, TextInput, Button, Alert } from "react-native";
 
-export const ProfileScreen = () => {
+export const ScanScreen = () => {
   return (
     <View>
-      <Text>Profile</Text>
+      <Text>Scan</Text>
     </View>
   );
 };

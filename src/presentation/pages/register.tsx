@@ -3,9 +3,11 @@ import { View, StyleSheet, Text, TextInput, Button, Alert } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
+
 export const RegisterScreen = () => {
   const [secureTextEntry, setSecureTextEntry] = useState(true);
-
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -40,7 +42,7 @@ export const RegisterScreen = () => {
             <Button
               title="Đăng Nhập"
               onPress={() => {
-                Alert.alert("Đăng nhập thành công");
+                navigation.replace("inApp");
               }}
               color={"white"}
             />
@@ -64,6 +66,7 @@ export const RegisterScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 20,
     flex: 1,
     width: "100%",
     height: "100%",
@@ -81,10 +84,13 @@ const styles = StyleSheet.create({
     height: "40%",
     backgroundColor: "white",
     top: -150,
-    borderWidth: 1,
+    // borderWidth: 1,
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5,
   },
   mkinput: {
     flexDirection: "row",

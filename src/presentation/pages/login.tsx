@@ -1,10 +1,19 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View, StyleSheet, Text, TextInput, Button, Alert } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  TextInput,
+  Button,
+  Alert,
+  SafeAreaView,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 export const LoginScreen = () => {
   const Navigation = useNavigation();
   return (
+    // <SafeAreaView>
     <View style={styles.container}>
       <View style={[styles.box, { width: "100%", height: "60%" }]}>
         <LinearGradient
@@ -61,6 +70,7 @@ export const LoginScreen = () => {
         </View>
       </View>
     </View>
+    // {/* </SafeAreaView> */}
   );
 };
 
@@ -71,6 +81,7 @@ const styles = StyleSheet.create({
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
+    marginTop: 20,
     // backgroundColor: "yellow",
   },
   texttop1: {

@@ -1,10 +1,10 @@
 import React from "react";
 import { View, StyleSheet, Text, TextInput, Button, Alert } from "react-native";
 
-export const ProfileScreen = () => {
+export const ThongbaoScreen = () => {
   return (
     <View>
-      <Text>Profile</Text>
+      <Text>Thong bao</Text>
     </View>
   );
 };
